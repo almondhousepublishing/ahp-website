@@ -1,0 +1,385 @@
+@font-face {
+  font-family: "Pixelbasel";
+  src: url("/static/fonts/pixelbasel/Pixelbasel.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+.f-pixel { font-family: "Pixelbasel"; }
+
+@font-face {
+  font-family: "Rollmops";
+  src: url("/static/fonts/rollmops/Rollmops.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+.f-mops { font-family: "Rollmops"; }
+
+:root {
+  --color-light: #9a9f4bdb;
+  --color-text: #496b22db;
+  --color-bold: #0e450bdb;
+  --color-shadow: #1b2a09db;
+
+  --bump-a: 2px;
+  --bump-b: 3px;
+  --bump-c: 4px;
+  --bump-d: 6px;
+  --bump-e: 8px;
+  --bump-f: 12px;
+  --bump-g: 16px;
+  --bump-h: 20px;
+  --bump-i: 24px;
+  --bump-max: 28px;
+  --bump-uber: 32px;
+}
+
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: 9999;
+  opacity: 0.14;
+
+  background:
+    repeating-linear-gradient(
+      0deg,
+      rgba(255, 255, 255, 0.2) 0 1px,
+      transparent 1px 3px
+    ),
+    repeating-linear-gradient(
+      90deg,
+      rgba(27, 42, 9, 0.15) 0 1px,
+      transparent 1px 4px
+    );
+}
+
+.content {
+  min-height: 100vh;
+  padding: var(--bump-f);
+
+  background-color: var(--color-light);
+  color: var(--color-bold);
+  font-size: 1.75rem;
+  font-family: "Pixelbasel";
+}
+
+header,
+main,
+footer {
+  max-width: 2160px;
+  margin: var(--bump-d) auto;
+  padding: var(--bump-d);
+}
+
+.header {
+  max-width: 72%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-around;
+  padding: var(--bump-d);
+  margin: 0 auto;
+
+  background-color: var(--color-text);
+  border-radius: var(--bump-d);
+  box-shadow: var(--bump-a) var(--bump-a) var(--bump-a) var(--color-bold);
+}
+
+.header a {
+  display: inline-block;
+  transition: transform 0.2s ease;
+
+  color: var(--color-shadow);
+  font-weight: bold;
+}
+
+.header a:hover {
+  transform: translateY(-2px);
+
+  color: var(--color-light);
+  text-shadow: 1px 2px 1px var(--color-shadow);
+}
+
+.view {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  padding: var(--bump-d);
+}
+
+h1 {
+  letter-spacing: 8px;
+  font-size: 6rem;
+  margin: -8px 0;
+  color: var(--color-shadow);
+}
+
+.display {
+  max-width: 72%;
+  margin: var(--bump-g);
+  padding: var(--bump-h);
+
+  background-color: var(--color-text);
+  color: var(--color-shadow);
+  border-radius: var(--bump-f);
+  border-bottom-right-radius: 72px;
+}
+
+.listing {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: var(--bump-uber);
+  margin: var(--bump-e);
+  padding: var(--bump-h);
+}
+
+.listing-item {
+  aspect-ratio: 1;
+  border-radius: 50%;
+  border: 1px solid var(--color-text);
+  display: grid;
+  place-items: center;
+  padding: var(--bump-i);
+  margin: 0 var(--bump-d);
+  text-align: center;
+  font-size: smaller;
+  transition:
+    background-color 1.7s ease-in-out,
+    color 1.7s ease-in-out;
+}
+
+.listing-item.active {
+  background-color: var(--color-shadow);
+  color: var(--color-light);
+}
+
+.imagebox {
+  max-width: 72%;
+  padding: var(--bump-f);
+  z-index: 9999;
+  font-size: 1.3rem;
+
+  background-color: var(--color-shadow);
+  color: var(--color-light);
+  border-radius: var(--bump-d);
+  margin-top: var(--bump-f);
+}
+
+@media (max-width: 1299px) {
+  .content {
+    font-size: 1.5rem;
+  }
+
+  .header,
+  .display,
+  .listing {
+    max-width: 79%;
+  }
+
+  h1 {
+    letter-spacing: 7px;
+    font-size: 5rem;
+  }
+}
+
+@media (max-width: 1099px) {
+  .content {
+    font-size: 1.35rem;
+  }
+
+  .header,
+  .display,
+  .listing,
+  .imagebox {
+    max-width: 86%;
+  }
+
+  h1 {
+    letter-spacing: 4.5px;
+    font-size: 4.5rem;
+  }
+}
+
+@media (max-width: 899px) {
+  .listing {
+    gap: var(--bump-uber);
+    grid-template-columns: repeat(2, 1fr);
+    padding: var(--bump-i);
+    margin: -4px var(--bump-e);
+    font-size: larger;
+  }
+  .listing-item {
+    margin: var(--bump-e);
+  }
+  h1 {
+    letter-spacing: 4px;
+    font-size: 4rem;
+    margin: -5px 0;
+  }
+}
+
+@media (max-width: 799px) {
+  .listing {
+    gap: var(--bump-max);
+    grid-template-columns: repeat(2, 1fr);
+    padding: var(--bump-e);
+    margin: -4px var(--bump-e);
+    font-size: larger;
+  }
+  h1 {
+    letter-spacing: 3.5px;
+    font-size: 3.5rem;
+  }
+}
+
+@media (max-width: 699px) {
+  .content {
+    padding: var(--bump-d);
+    font-size: 1.25rem;
+  }
+
+  header,
+  main,
+  footer {
+    margin: var(--bump-b);
+    padding: var(--bump-b);
+  }
+
+  .header {
+    max-width: 93%;
+  }
+
+  h1 {
+    letter-spacing: 2.75px;
+    font-size: 2.75rem;
+  }
+
+  .display {
+    max-width: 93%;
+    margin: var(--bump-f);
+    padding: var(--bump-g);
+
+    border-radius: var(--bump-e);
+    border-bottom-right-radius: 64px;
+  }
+
+  .listing {
+    gap: var(--bump-g);
+    max-width: 93%;
+    margin: 0;
+    padding: var(--bump-g);
+  }
+
+  .imagebox {
+    max-width: 93%;
+    font-size: 1.2rem;
+    padding: var(--bump-d);
+  }
+}
+
+@media (max-width: 599px) {
+  h1 {
+    letter-spacing: 2.5px;
+    font-size: 2.5rem;
+    margin: -6px 0;
+  }
+}
+
+@media (max-width: 499px) {
+  .content {
+    padding: var(--bump-c);
+
+    font-size: 1.05rem;
+  }
+
+  header,
+  main,
+  footer {
+    margin: var(--bump-a);
+    padding: var(--bump-a);
+  }
+
+  .header {
+    max-width: 95%;
+  }
+
+  h1 {
+    letter-spacing: 2.35px;
+    font-size: 2.35rem;
+  }
+
+  .display {
+    max-width: 95%;
+    margin: var(--bump-e);
+    padding: var(--bump-f);
+
+    border-radius: var(--bump-d);
+    border-bottom-right-radius: 56px;
+  }
+
+  .listing {
+    gap: var(--bump-f);
+    max-width: 95%;
+    padding: var(--bump-f);
+  }
+
+  .imagebox {
+    max-width: 95%;
+    font-size: 1.1rem;
+  }
+}
+
+@media (max-width: 449px) {
+  .content {
+    padding: var(--bump-b);
+
+    font-size: 0.95rem;
+  }
+  h1 {
+    letter-spacing: 2.25px;
+    font-size: 2.25rem;
+  }
+  .listing {
+    gap: var(--bump-e);
+    padding: var(--bump-e);
+  }
+}
+
+@media (max-width: 400px) {
+  .content {
+    padding: var(--bump-a);
+
+    font-size: 0.9rem;
+  }
+  .header,
+  .display,
+  .listing,
+  .imagebox {
+    max-width: 97%;
+  }
+  .listing {
+    padding: var(--bump-c);
+  }
+  h1 {
+    letter-spacing: 2px;
+    font-size: 2rem;
+  }
+}
+
+@media (max-width: 349px) {
+  .content {
+    font-size: 0.85rem;
+  }
+  .header,
+  .display,
+  .listing,
+  .imagebox {
+    max-width: 98%;
+  }
+  h1 {
+    letter-spacing: 1.75px;
+    font-size: 1.75rem;
+  }
+}
