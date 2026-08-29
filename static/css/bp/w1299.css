@@ -1,0 +1,25 @@
+@media (max-width: 1299px) {
+  .content {
+    font-size: 1.5rem;
+  }
+
+  .header,
+  .display,
+  .listing {
+    max-width: 79%;
+  }
+
+  h1 {
+    letter-spacing: 7px;
+    font-size: 5rem;
+  }
+
+  #owner-photo {
+    height: 180px;
+    width: 180px;
+  }
+  #ff-photo {
+    height: 180px;
+    width: 180px;
+  }
+}

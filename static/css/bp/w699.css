@@ -1,0 +1,44 @@
+@media (max-width: 699px) {
+  .content {
+    padding: var(--bump-d);
+    font-size: 1.25rem;
+  }
+
+  header,
+  main,
+  footer {
+    margin: var(--bump-b);
+    padding: var(--bump-b);
+  }
+
+  .header {
+    max-width: 93%;
+  }
+
+  h1 {
+    letter-spacing: 2.75px;
+    font-size: 2.75rem;
+  }
+
+  .display {
+    max-width: 93%;
+    margin: var(--bump-f);
+    padding: var(--bump-g);
+
+    border-radius: var(--bump-e);
+    border-bottom-right-radius: 64px;
+  }
+
+  .listing {
+    gap: var(--bump-h);
+    max-width: 93%;
+    margin: 0;
+    padding: var(--bump-g);
+  }
+
+  .imagebox {
+    max-width: 93%;
+    font-size: 1.2rem;
+    padding: var(--bump-d);
+  }
+}

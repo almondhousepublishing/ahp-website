@@ -1,0 +1,11 @@
+@media (max-width: 799px) {
+  .listing {
+    gap: var(--bump-i);
+    padding: var(--bump-e);
+    margin: -4px var(--bump-e);
+  }
+  h1 {
+    letter-spacing: 3.5px;
+    font-size: 3.5rem;
+  }
+}

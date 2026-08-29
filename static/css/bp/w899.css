@@ -1,0 +1,25 @@
+@media (max-width: 899px) {
+  .listing {
+    gap: var(--bump-max);
+    margin: -4px;
+    max-width: 82%;
+  }
+  .listing-item {
+    padding: 2px;
+    margin: 4px;
+    font-size: medium;
+  }
+  h1 {
+    letter-spacing: 4px;
+    font-size: 4rem;
+    margin: -5px 0;
+  }
+  .big-hide {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+  }
+  .small-hide {
+    display: none;
+  }
+}

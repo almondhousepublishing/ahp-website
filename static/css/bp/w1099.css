@@ -1,0 +1,17 @@
+@media (max-width: 1099px) {
+  .content {
+    font-size: 1.35rem;
+  }
+
+  .header,
+  .display,
+  .listing,
+  .imagebox {
+    max-width: 86%;
+  }
+
+  h1 {
+    letter-spacing: 4.5px;
+    font-size: 4.5rem;
+  }
+}

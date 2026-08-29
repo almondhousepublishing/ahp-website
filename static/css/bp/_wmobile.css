@@ -1,0 +1,52 @@
+@media (max-width: 449px) {
+  .content {
+    padding: var(--bump-b);
+
+    font-size: 0.95rem;
+  }
+  h1 {
+    letter-spacing: 2.25px;
+    font-size: 2.25rem;
+  }
+  .listing {
+    gap: var(--bump-e);
+    padding: var(--bump-e);
+  }
+}
+
+@media (max-width: 400px) {
+  .content {
+    padding: var(--bump-a);
+
+    font-size: 0.9rem;
+  }
+  .header,
+  .display,
+  .listing,
+  .imagebox {
+    max-width: 97%;
+  }
+  .listing {
+    padding: var(--bump-c);
+  }
+  h1 {
+    letter-spacing: 2px;
+    font-size: 2rem;
+  }
+}
+
+@media (max-width: 349px) {
+  .content {
+    font-size: 0.85rem;
+  }
+  .header,
+  .display,
+  .listing,
+  .imagebox {
+    max-width: 98%;
+  }
+  h1 {
+    letter-spacing: 1.75px;
+    font-size: 1.75rem;
+  }
+}

@@ -2,14 +2,34 @@
 
   <h1>Almond House Publishing</h1>
 
+  {% include "partials/listing.html" %}
+
   <div class="display">
 
-    <p>
-      Almond House Publishing develops original games, software, books, and other creative works that bring imagination and technology together. We believe great ideas deserve to be brought to life and experienced by others. As our vision continues to expand, Realms & Wires will serve as the home for our creative work: a dedicated space to discover new worlds, practical tools, and inspiring possibilities. Every project we release helps build a company dedicated to meaningful creativity and purposeful design.
-    </p>
+    <div class="display-f">
+
+      <span class="small-hide">{% include "components/images/owner.html" %}</span>
+
+      <p>
+        Almond House Publishing develops original games, software, books, and other creative works that bring imagination and technology together. We believe great ideas deserve to be brought to life and experienced by others. At the heart of everything we do is this simple idea: working on cool stuff can open doors to exciting new adventures and genuine fellowship.
+      </p>
+    </div>
+
+    <div class="display-f big-hide">
+      {% include "components/images/owner.html" %}
+      {% include "components/images/ffgame.html" %}
+    </div>
+
+    <div class="display-f">
+
+      <p>
+        As our vision continues to expand, Realms & Wires will serve as the home for our creative work: a dedicated space to discover new worlds, practical tools, and inspiring possibilities. Each project contributes to building a company dedicated to meaningful creativity and purposeful design.
+      </p>
+
+      <span class="small-hide">{% include "components/images/ffgame.html" %}</span>
+
+    </div>
 
   </div>
-
-  {% include "partials/listing.html" %}
 
 </div>
